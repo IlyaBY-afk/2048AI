@@ -21,8 +21,8 @@ class Board():
 	def add_random_tile(self):
 		candidates = []
 		for x, y in product(arange(self.size), repeat=2):
-			if self.board[x][y] == 0:
-				candidates.append((x, y))
+			if self.board[y][x] == 0:
+				candidates.append((y, x))
 
 		decision = random.choice(candidates)
 		num = choice(array([2, 4]), p=[0.9, 0.1])
